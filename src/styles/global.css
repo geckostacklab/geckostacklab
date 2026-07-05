@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'DM Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+@utility dot-grid {
+  /* Radial gradient for the background color shift (center to edges) */
+  background-image: 
+    radial-gradient(circle at center, black 0%, black 100%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  
+  /* Size of the grid cells */
+  background-size: 100%, 24px 24px;
+  
+  /* Blend them together (optional, depending on your colors) */
+  background-blend-mode: overlay;
+  
+  /* Ensures it covers the entire viewport */
+  width: 100vw;
+  height: 100vh;
+}
+
+@supports (corner-shape: squircle) {
+  .squircle {
+    border-radius: 40px;
+    corner-shape: squircle;
+  }
+}

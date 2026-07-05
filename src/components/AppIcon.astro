@@ -1,0 +1,20 @@
+---
+interface Props {
+  img?: string;
+  title?: string;
+  link?: string;
+}
+
+const { img, title, link } = Astro.props as Props;
+---
+
+<a href={link} target="_blank" class={link ? "cursor-pointer" : "cursor-wait"}>
+  <div class="flex flex-col justify-center items-center">
+    <div
+      class="bg-white/5 p-3 rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300 text-white/50 w-[70px] h-[70px] flex justify-center items-center"
+    >
+      {img ? <img src={img} class="h-8" /> : <span class="text-sm">+</span>}
+    </div>
+    <p class="text-xs text-white/50 mt-2">{title ? title : "Coming Soon"}</p>
+  </div>
+</a>
