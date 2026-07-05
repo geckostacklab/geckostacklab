@@ -6,19 +6,27 @@ import Layout from "../layouts/Layout.astro";
 <Layout>
 	<div class="w-full h-full dot-grid">
 		<div
-			class="max-w-xl flex flex-col justify-center items-center font-mono h-full mx-auto"
+			class="max-w-xl flex flex-col justify-center items-center font-mono h-full mx-auto p-6"
 		>
-			<img src="/geckostack-logo.svg" class="w-30 sm:w-50 rounded-3xl" />
-			<h1 class="text-4xl mt-8 text-neutral-300">Gecko Stack</h1>
-			<p class="text-lg font-mono text-neutral-400 text-center mt-3">
+			<div class="rounded-3xl p-[2px] bg-gradient-to-r from-[#39ff5a48] to-[#b9ffbfb0]">
+				<img src="/geckostack-logo.svg" class="w-30 sm:w-40 rounded-3xl" />
+			</div>
+			<h1 class="text-xl sm:text-4xl mt-8 text-neutral-300">Gecko Stack</h1>
+			<p
+				class="text-sm sm:text-lg font-mono text-neutral-400 text-center mt-1 sm:mt-3"
+			>
 				Handcrafted products for humans and agents
 			</p>
-			<p class="text-md font-mono text-neutral-500 text-center">
+			<p class="text-xs sm:text-md font-mono text-neutral-500 text-center">
 				bringing craftsmanship back to the internet
 			</p>
 
 			<div class="flex mt-16 gap-4">
-				<AppIcon img="/geckofx.svg" title="GeckoFX" link="https://geckofx.geckostack.store/"/>
+				<AppIcon
+					img="/geckofx.svg"
+					title="GeckoFX"
+					link="https://geckofx.geckostack.store/"
+				/>
 				<AppIcon />
 				<AppIcon />
 				<AppIcon />
